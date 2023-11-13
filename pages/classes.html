@@ -1,0 +1,209 @@
+<!---
+Stephen Flynn
+SD1B
+D00270479
+Client-Side Website
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Classes - Sport @ DkIT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <script>
+            // JavaScript for Hamburger Menu
+                document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            hamburgerMenu.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <nav class="sticky-nav">
+            <div class="left">
+                <a href="../index.html" class="logo">Sport @ DkIT</a>
+            </div>
+            <div class="right">
+                <a href="#">Classes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+    
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="dropdown-content">
+                  <a href="#">Classes</a>
+                  <a href="about.html">About</a>
+                  <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <!--NAVBAR ENDS-->
+
+        <!--HEADER-->
+        <div class="classes-header">
+            <div class="classes-header-overlay"></div>
+            <div class="classes-header-text">
+                <h2>Our Classes</h2>
+                <p>What Can We Do For You?</p>
+            </div>
+        </div>
+        <!--HEADER END-->
+
+        <!--Fitness Categories-->
+        <div class="classes-content">
+            <h1 class="classes-heading">Our Fitness Categories</h1>
+            <a href="contact.html" class="classes-link">
+                <div class="classes-container">
+                    <div class="classes-image">
+                        <img src="../assets/classes-strength.jpg" alt="Strength">
+                    </div>
+                    <div class="classes-text">
+                        <h2>Strength</h2>
+                        <p>Build and tone muscles with expert-led strength classes, enhancing physical performance and maximizing your strength potential at Healthy Campus.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="contact.html" class="classes-link">
+                <div class="classes-container">
+                    <div class="classes-text">
+                        <h2>Flexibility</h2>
+                        <p>Improve flexibility and range of motion through tailored classes, fostering agility and preventing injury for a more fluid, adaptable body.</p>
+                    </div>
+                    <div class="classes-image">
+                        <img src="../assets/classes-flex.jpg" alt="Flexibility">
+                    </div>
+                </div>
+            </a>
+            <a href="contact.html" class="classes-link">
+                <div class="classes-container">
+                    <div class="classes-image">
+                        <img src="../assets/classes-bal.jpg" alt="Balance">
+                    </div>
+                    <div class="classes-text">
+                        <h2>Balance</h2>
+                        <p>Enhance stability and coordination with balance classes, promoting core strength and preventing falls for improved overall functional fitness.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="contact.html" class="classes-link">
+                <div class="classes-container">
+                    <div class="classes-text">
+                        <h2>Endurance</h2>
+                        <p>Boost cardiovascular health and stamina with our endurance classes, combining high-intensity workouts for improved fitness and endurance performance.</p>
+                    </div>
+                    <div class="classes-image">
+                        <img src="../assets/classes-endurance.jpg" alt="Endurance">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--Fitness Categories End-->
+
+        <!--CSS Mask-->
+        <div class="classes-mask">
+            <div class="classes-mask-text">
+                <h1>Stronger!</h1>
+            </div>
+        </div>
+        <!--CSS Mask End-->
+
+        <!--Trainer Profile Cards-->
+        <div class="classes-tracks">
+            <h1>Meet Your Trainers</h1>
+            <p>A Dedicated Coach To Help You Smash Your Goals!</p>
+        </div>
+        <div class="classes-card-container">
+            <div class="card">
+              <img src="../assets/trainer4.jpg" alt="Leia" style="width:100%">
+              <h1>Leia</h1>
+              <p>Trainer - Strength</p>
+              <div style="margin: 24px 0;">
+                <ul class="interests-list">
+                  <li>Mon / Fri</li>
+                  <li>Nutrition Plan</li>
+                  <li>Weight Room Classes</li>
+                </ul>
+              </div>
+              <a href="contact.html"><p><button class="classes-card-button">Train With Leia</button></p></a>
+            </div>
+        
+            <div class="card">
+              <img src="../assets/trainer1.jpg" alt="Luke" style="width:100%">
+              <h1>Luke</h1>
+              <p>Trainer - Cardio</p>
+              <div style="margin: 24px 0;">
+                <ul class="interests-list">
+                  <li>Wed / Sat</li>
+                  <li>Marathon Training</li>
+                  <li>Jogging Group</li>
+                </ul>
+              </div>
+              <a href="contact.html"><p><button class="classes-card-button">Train With Luke</button></p></a>
+            </div>
+          
+           <div class="card">
+              <img src="../assets/trainer3.jpg" alt="Han" style="width:100%">
+              <h1>Han</h1>
+              <p>Trainer - Endurance</p>
+              <div style="margin: 24px 0;">
+                <ul class="interests-list">
+                  <li>Mon / Sat</li>
+                  <li>Resistance Training</li>
+                  <li>Diet Planning</li>
+                </ul>
+              </div>
+              <a href="contact.html"><p><button class="classes-card-button">Train With Han</button></p></a>
+            </div>
+          </div>
+        <!--Trainer Profile Cards End-->
+
+            <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SPORT @ DKIT</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="#">Classes</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="../assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="../assets/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; Sport @ DkIT | A Healthy Campus Initiative</p>
+                    <p>Dundalk, Co Louth</p>
+                </div>
+            </div>
+        </footer>
+    <!--FOOTER ENDS-->
+
+    </body>
+</html>
+
+
+
+
+
+
+

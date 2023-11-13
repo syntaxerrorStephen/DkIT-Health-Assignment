@@ -1,0 +1,816 @@
+/*
+Stephen Flynn
+SD1B
+D00270479
+Client-Side Website
+
+All pages follow a uniform design and layout as follows:
+- Nav
+- Header
+- Content
+ -Images
+ - Standard grey background
+ -Text
+- Footer
+
+*/
+
+/* ------ CONSTANTS ------ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    font-family: 'Poppins', sans-serif; /*Main font family for the body */
+  }
+  
+  
+  /* Sticky Navigation Bar */
+  .sticky-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.380); /* To give the opacity effect on the nav */
+    z-index: 3; /* Keeps the nav on top by manually adjusting the z-index */
+    text-transform: uppercase; /*Forces uppercase on all text in the nav */
+  }
+  
+
+  .left, .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    /* Text logo kept separate to rest of nav so it can be styled individually */
+    font-size: 2em;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .right a {
+    margin-left: 60px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: white;
+  }
+
+  /* ------ CONSTANTS END ------ */
+
+/* CONTACT PAGE */
+  .contact-header {
+    position: relative;
+    height: 500px; 
+    background-image: url('assets/contact-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(59, 17, 17), rgb(55, 44, 44)); /* Gives a gradient overlay on the header */
+    filter: opacity(70%); /* Use of filter: Sets the opacity of the overlay */
+  }
+  
+  .contact-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .contact-header-text h2 {
+    font-size: 7em;
+  }
+  
+  .contact-header-text p {
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+
+  .contact-heading {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+  }
+
+  .contact-content {
+    color: #fff;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column; /* Iusses with text all being on one lane, fixed with colum */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-content h2 {
+    margin-bottom: 20px; /* Adds margin to the bottom of each <h2> element */
+  }
+  /* ------ CONTACT PAGE END ------ */
+  
+/* ABOUT PAGE */
+.about-header {
+  position: relative;
+  height: 500px;
+  background-image: url('assets/about-header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.about-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgb(59, 17, 17), rgb(55, 44, 44));
+  filter: opacity(70%); /* Use of filter: Sets the opacity of the overlay */
+}
+
+.about-header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.about-header-text h2 {
+  font-size: 7em;
+}
+
+.about-header-text p {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+
+
+.about-content {
+  color: #fff;
+  padding-top: 30px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.about-image {
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+  border-radius: 3%;
+
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.about-text h2 {
+text-transform: uppercase;
+}
+
+.about-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: lighten; /* Use of blending: Lightens the image */
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 2em;
+}
+
+.about-slideshow-heading {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+.slideshow {
+  width: 100%; 
+  height: 500px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow img {
+  position: absolute;
+  animation: slideshow 20s infinite;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slideshow img:first-child {
+  opacity: 1; /* Set initial opacity for the first image */
+}
+
+@keyframes slideshow {
+  25% {
+  opacity: 1;
+  }
+  40% {
+  opacity: 0;
+  }
+}
+
+.slideshow img:nth-child(4) {
+animation-delay: 0s;
+}
+
+.slideshow img:nth-child(3) {
+animation-delay: 5s;
+}
+
+.slideshow img:nth-child(2) {
+animation-delay: 10s;
+}
+
+.slideshow img:nth-child(1) {
+animation-delay: 15s;
+}
+/* ------ ABOUT PAGE END ------ */
+
+
+/* ------ CLASSES PAGE ------ */
+
+.classes-header {
+    position: relative;
+    height: 500px; 
+    background-image: url('assets/classes-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.classes-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(59, 17, 17), rgb(55, 44, 44));
+    filter: opacity(70%); /* Use of filter: Sets the opacity of the overlay */
+}
+
+.classes-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.classes-header-text h2 {
+    font-size: 7em;
+}
+
+.classes-header-text p {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+
+.classes-content {
+    color: #fff;
+    padding-top: 30px;
+}
+
+.classes-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.classes-container:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Change the background color on hover */
+}
+
+.classes-link {
+  text-decoration: none;
+  color: #fff; /* Adjust the color to your preference */
+}
+
+.classes-image {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    border-radius: 3%;
+
+}
+
+.classes-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.classes-text h2 {
+  text-transform: uppercase;
+}
+
+.classes-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.classes-heading {
+    text-align: center;
+    font-size: 2em;
+  }
+
+.classes-content a {
+    text-decoration: none;
+}
+
+.classes-mask {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #111;
+  text-transform: uppercase;
+  background-image: url(assets/classes-mask-image.jpg);
+  filter: grayscale(0%); /* Use of filter: Sets the grayscale of the image (not working?) */
+  background-size: cover;
+}
+
+.classes-mask h1 {
+  font-size: 25vw;
+  background-image: url(assets/classes-header.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.classes-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+  background-color: #303030;
+  color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+}
+
+
+.classes-card-title {
+  color: grey;
+  font-size: 18px;
+}
+
+.classes-card-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.classes-card-container a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.classes-card-button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.interests-list {
+  list-style: none;
+   padding: 0;
+   text-align: center;
+ }
+ 
+ .interests-list li {
+   margin-bottom: 10px;
+   font-size: 14px;
+ }
+ 
+ /* Issues making standard HTML bullet points go unifrom with list. Used unicode characters instead to make custom bullet points. */
+ .interests-list li::before {
+   content: '\2022'; /* Unicode character for a bullet point */
+   color: #000000; /* Color of the bullet point */
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em; /* Negative margin to overlap the default bullet point */
+   margin-right: 5px; 
+ }
+
+ .classes-tracks {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+ }
+  /* ------ CLASSES PAGE ENDS ------ */
+
+
+
+
+
+/* ------ INDEX PAGE ------ */
+
+
+  /* HEADER */
+  .index-header {
+    position: relative;
+    padding: 200px 0; /* Increased padding at the top */
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  }
+
+.header-text {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding-left: 50px;
+    
+}
+
+.header-text h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2em;
+    text-transform: uppercase;
+  }
+  
+  .header-text h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2em;
+    text-transform: uppercase;
+  }
+  
+  .header-text p {
+    position: relative;
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    color: #fff;
+  }
+  
+  .header-text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+  }
+  
+  #headerVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire header */
+  }
+  
+  .index-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgb(255, 255, 255));
+    z-index: 1; 
+    filter: opacity(40%); /* Use of filter: Sets the opacity of the overlay */
+  }
+  
+
+
+  .content-gallery {
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .featured-classes-heading {
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+  
+  .image-card {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .image-card img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Add a transition effect */
+  }
+  
+  .image-card img:hover {
+    transform: scale(1.05); /* Increase the size of the image on hover */
+  }
+  
+  .tag {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+
+  .button {
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em; 
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #2c3e50; /* Darker background color */
+    color: #ecf0f1; /* Light text color */
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #34495e; /* Darker color on hover */
+  }
+  
+  .view-all-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+
+
+  .inspiration {
+    position: relative;
+    height: 400px; 
+    background-image: url('assets/quote-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.overlay-quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0); /* Adjust the overlay color and opacity */
+    opacity: 0.7;
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.quote h2 {
+    font-size: 4em;
+}
+
+.quote p {
+    font-size: 1.5em;
+}
+/* ------ INDEX PAGE END ------ */
+
+
+
+/* ------ FOOTER ------ */
+.footer {
+    background-color: #303030;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: auto;
+    height: auto;
+}
+
+
+.footer-info p {
+    font-size: 1em;
+}
+/* ------ FOOTER END ------ */
+
+
+/* ------ HAMBURGER MENU ------ */
+.hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+    padding-right: 50px;
+  }
+  
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+  }
+  
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .dropdown-content a {
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: 0.4s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+/* ------ HAMBURGER MENU END ------ */    
+
+
+/* ------ MEDIA QUERIES ------ */
+@media screen and (max-width: 840px) {
+    .quote h2 {
+      font-size: 3em; /* Adjust the font size for mobile */
+    }
+  
+    .quote p {
+      font-size: 1.2em; /* Adjust the font size for mobile */
+    }
+
+    /* Hamburger Menu */
+    .right {
+        display: none; /* Hide the right side of the nav */
+      }
+    
+      .hamburger-menu {
+        display: block; /* Show the hamburger menu on smaller screens */
+      }
+    
+      .sticky-nav {
+        justify-content: space-between; /* Adjust alignment for hamburger menu */
+      }
+    
+      .dropdown-content.show {
+        display: flex;
+      }
+
+      .about-container {
+        flex-direction: column; /* Change to a column layout on smaller screens */
+      }
+    
+      .about-text,
+      .about-image {
+        max-width: 100%; /* Allow both text and image to take full width */
+      }
+
+  }
+/* ------ MEDIA QUERIES END ------ */

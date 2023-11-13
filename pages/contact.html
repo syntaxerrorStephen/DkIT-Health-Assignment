@@ -1,0 +1,98 @@
+<!---
+Stephen Flynn
+SD1B
+D00270479
+Client-Side Website
+--->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact - Sport @ DkIT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <script>
+            // JavaScript for Hamburger Menu
+                document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            hamburgerMenu.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="sticky-nav">
+            <div class="left">
+                <a href="../index.html" class="logo">Sport @ DkIT</a>
+            </div>
+            <div class="right">
+                <a href="classes.html">Classes</a>
+                <a href="about.html">About</a>
+                <a href="#">Contact</a>
+            </div>
+    
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="dropdown-content">
+                  <a href="classes.html">Classes</a>
+                  <a href="about.html">About</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="contact-header">
+            <div class="contact-header-overlay"></div>
+            <div class="contact-header-text">
+                <h2>Contact</h2>
+                <p>Lets Talk!</p>
+            </div>
+        </div>
+          
+        <h1 class="contact-heading">Get In Touch</h1>
+        <div class="contact-content">
+            
+            <h2>Email Us At: <b>info@healthy-campus.ie</b></h2>
+            <h2>Call Us At: <b>086-123-4567</b></h2>
+            <h2>Visit Us At: <b>Madeup Street, Dundalk, Co Louth</b></h2>
+        </div>
+        <br>
+
+         <!--FOOTER-->
+         <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SPORT @ DKIT</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="classes.html">Classes</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="../assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="../assets/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; Sport @ DkIT | A Healthy Campus Initiative</p>
+                    <p>Dundalk, Co Louth</p>
+                </div>
+            </div>
+        </footer>
+    <!--FOOTER ENDS-->
+
+    </body>
+</html>

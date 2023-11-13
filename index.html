@@ -1,0 +1,152 @@
+<!---
+Stephen Flynn
+SD1B
+D00270479
+Client-Side Website
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sport @ DkIT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            // JavaScript for Hamburger Menu
+                document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            hamburgerMenu.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+            });
+            });
+        </script>
+    </head>
+<body>
+
+    <!--NAVBAR-->
+    <nav class="sticky-nav">
+        <div class="left">
+            <a href="#" class="logo">Sport @ DkIT</a>
+        </div>
+        <div class="right">
+            <a href="pages/classes.html">Classes</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+
+        <!--Hamburger menu hidden-->
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="dropdown-content">
+              <a href="pages/classes.html">Classes</a>
+              <a href="pages/about.html">About</a>
+              <a href="pages/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!--NAVBAR ENDS-->
+
+
+    <!--HEADER-->
+    <div class="index-header">
+        <!--Adding video for the header-->
+        <video autoplay muted loop id="headerVideo">
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+        <!--Declaring empty div for the grey/black overlay-->
+        <div class="index-overlay"></div> 
+        <div class="header-text">
+            <h2>Healthy Campus @ DkIT</h2>
+            <h3>Be The Best You Can</h3>
+            <p>Join Sport @ DkIT today and get access to our state of the art facilities and classes.</p>
+            <a href="pages/contact.html">Join Now</a>
+        </div>
+    </div>
+    <!--HEADER ENDS-->
+
+
+    <!--GALLERY-->
+    <div class="content-gallery">
+        <h1 class="featured-classes-heading"> Featured Classes</h1>
+
+        <div class="image-gallery">
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class2.jpg" alt="Class 1"></a>
+                <div class="tag">Cardio</div>
+            </div>
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class3.jpg" alt="Class 2"></a>
+                <div class="tag">Strength</div>
+            </div>
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class4.jpg" alt="Class 3"></a>
+                <div class="tag">Yoga</div>
+            </div>
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class1.jpg" alt="Class 4"></a>
+                <div class="tag">Kickboxing</div>
+            </div>
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class5.jpg" alt="Class 5"></a>
+                <div class="tag">Crossfit</div>
+            </div>
+            <div class="image-card">
+                <a href="pages/classes.html"><img src="assets/class6.jpg" alt="Class 6"></a>
+                <div class="tag">HIIT</div>
+            </div>
+        </div>
+        <div class="view-all-button">
+            <a href="pages/classes.html" class="button">View All Classes</a>
+        </div>
+    </div>
+    <!--GALLERY ENDS-->
+
+    <!--QUOTE SECTION-->
+    <div class="inspiration">
+        <div class="overlay-quote"></div>
+        <div class="quote">
+            <h2>"Who's Gonna Carry The Boats"</h2>
+            <p>- David Goggins</p>
+        </div>
+    </div>
+    <!--QUOTE SECTION ENDS-->
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>SPORT @ DKIT</h2>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="pages/classes.html">Classes</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>&copy; Sport @ DkIT | A Healthy Campus Initiative</p>
+                <p>Dundalk, Co Louth</p>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER ENDS-->
+    
+</body>
+</html>
